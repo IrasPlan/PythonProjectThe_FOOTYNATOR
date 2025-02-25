@@ -42,7 +42,18 @@ def main():
         {"name": "Luis Suárez", "league": "Brasileiro Série A", "team": "Grêmio", "position": "Forward", "age": "38", "nationality": "Uruguay"},
         {"name": "Thomas Müller", "league": "Bundesliga", "team": "Bayern Munich", "position": "Midfielder", "age": "35", "nationality": "Germany"},
         {"name": "Vinicius Junior", "league": "La Liga", "team": "Real Madrid", "position": "Forward", "age": "24", "nationality": "Brazil"},
-        # You can add more players here
+        {"name": "Nico Williams", "league": "La Liga", "team": "Athletico Bilbao", "position": "Forward", "age": "22", "nationality": "Spain"},
+        {"name": "Lamine Yamal", "league": "La Liga", "team": "Barcelona", "position": "Midfielder", "age": "17", "nationality": "Spain"},
+        {"name": "Pau Cubarsi", "league": "La Liga", "team": "Barcelona", "position": "Defender", "age": "18", "nationality": "Spain"},
+        {"name": "Ferran Torres", "league": "La Liga", "team": "Barcelona", "position": "Midfielder", "age": "24", "nationality": "Spain"},
+        {"name": "Sergio Ramos", "league": "La Liga", "team": "Sevilla", "position": "Defender", "age": "38", "nationality": "Spain"},
+        {"name": "Antony", "league": "Premier League", "team": "Manchester United", "position": "Forward", "age": "25", "nationality": "Brazil"},
+        {"name": "Jude Bellingham", "league": "La Liga", "team": "Real Madrid", "position": "Midfielder", "age": "21", "nationality": "England"},
+        {"name": "Antonio Rüdiger", "league": "La Liga", "team": "Real Madrid", "position": "Defencer", "age": "31", "nationality": "Germany"},
+        {"name": "Dani Olmo", "league": "La Liga", "team": "Barcelona", "position": "Midfielder", "age": "26", "nationality": "Spain"},
+        {"name": "Dani Carvajal", "league": "La Liga", "team": "Real Madrid", "position": "Defender", "age": "33", "nationality": "Spain"},
+        {"name": "Gonzalo Garcia", "league": "La Liga", "team": "Real Madrid", "position": "Forward", "age": "20", "nationality": "Spain"},
+
     ]
 
     print("Think of a football player, and I'll try to guess who it is by asking a few questions.")
@@ -58,6 +69,7 @@ def main():
         ("team", "Which team does he play for?"),
         ("age", "What is his age?")
 
+
     ]
 
     for attribute, question in questions:
@@ -69,7 +81,7 @@ def main():
         candidates = filter_players(candidates, attribute, answer)
 
         if not candidates:
-            print("No player matches that description.")
+            print("No player matches that description. Please try again.")
             return
 
     if len(candidates) == 1:
